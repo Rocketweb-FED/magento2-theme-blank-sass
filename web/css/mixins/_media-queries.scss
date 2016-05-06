@@ -18,7 +18,17 @@
     }
     @each $key, $value in $args {
         @if $value {
-            $expr: "#{$expr} and (#{$key}: #{$value})";
+            @if ($key == 'max-width') {
+                @if ($value == $screen__s or $value == $screen__m){
+                    $expr: "#{$expr} and (#{$key}: #{$value}-1)";
+                }
+                @else {
+                    $expr: "#{$expr} and (#{$key}: #{$value})";
+                }
+            }
+            @else {
+                $expr: "#{$expr} and (#{$key}: #{$value})";
+            }
         }
     }
     @media #{$media-type} #{$expr} {
