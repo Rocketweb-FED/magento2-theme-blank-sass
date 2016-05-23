@@ -12,7 +12,6 @@
 @include lib-magento-reset();
 
 // Theme blocks
-@import 'blocks/extends';
 @import 'blocks/typography';
 @import 'blocks/layout';
 @import 'blocks/tables';
@@ -30,9 +29,6 @@
 @import 'blocks/popups';
 @import 'blocks/price';
 @import 'blocks/gallery';
-
-// Theme extends
-@import 'blocks/extends';
 
 // Components styles (modal/sliding panel)
 @import 'blocks/components/modals'; // from lib
@@ -87,3 +83,6 @@
 @import '../../Magento_Sales/css/source/widgets';
 @import '../../Magento_VersionsCms/css/source/widgets';
 @import '../../Magento_AdvancedCheckout/css/source/widgets';
+
+// Theme extends
+@import 'blocks/extends';
